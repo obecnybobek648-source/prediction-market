@@ -7,5 +7,39 @@
       "main": true,
       "*": false
     }
-  }
+  },
+  "crons": [
+    {
+      "path": "/api/sync/events",
+      "schedule": "2,11,20,29,38,47,56 * * * *"
+    },
+    {
+      "path": "/api/sync/event-creations/enqueue",
+      "schedule": "0,30 * * * *"
+    },
+    {
+      "path": "/api/sync/event-creations",
+      "schedule": "1,31 * * * *"
+    },
+    {
+      "path": "/api/sync/translations/enqueue",
+      "schedule": "17 * * * *"
+    },
+    {
+      "path": "/api/sync/translations",
+      "schedule": "18 * * * *"
+    },
+    {
+      "path": "/api/sync/resolution",
+      "schedule": "5-55/10 * * * *"
+    },
+    {
+      "path": "/api/sync/volume/enqueue",
+      "schedule": "*/10 * * * *"
+    },
+    {
+      "path": "/api/sync/volume",
+      "schedule": "*/5 * * * *"
+    }
+  ]
 }
